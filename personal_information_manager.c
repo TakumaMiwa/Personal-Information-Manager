@@ -471,20 +471,12 @@ struct profile *new_profile(struct profile *p, char *line){
         fprintf(stderr,"Input a proper birthday．\n");
         return NULL;
     }
-    if(myatoi(birth[0])==-10001){
+    if(myatoi(birth[0])==-10001||myatoi(birth[1])==-10001||myatoi(birth[2])==-10001){
         fprintf(stderr,"Input a proper birthday．\n");
         return NULL;
     }
     p->birthday.y = myatoi(birth[0]);
-    if(myatoi(birth[1])==-10001){
-        fprintf(stderr,"適切な誕生日を入力してください．\n");
-        return NULL;
-    }
     p->birthday.m = myatoi(birth[1]);
-    if(myatoi(birth[2])==-10001){
-        fprintf(stderr,"適切な誕生日を入力してください．\n");
-        return NULL;
-    }
     p->birthday.d = myatoi(birth[2]);
     strncpy(p->adress,ret[3],max_len); p->adress[max_len] = '\0';
     free(p->comment);
