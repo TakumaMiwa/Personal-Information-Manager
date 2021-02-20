@@ -51,6 +51,18 @@ int myatoi(char *str);
 int main(){
     char line[MAX_LINE_LEN + 1];
 
+    printf("Program runs\n\n");
+    printf("This program stores personal information which consists of ID, Name, Birthday, Adress, and Comment.\n");
+    printf("Command:\n%%Q: quit the program\n");
+    printf("%%C: display the number of data\n");
+    printf("%%P n: Print n data on the console");
+    printf("%%R file: Input data from file\n");
+    printf("%%W file: Output data to file\n");
+    printf("%%F word: Find the data which includes the word\n");
+    printf("%%S n: Sort data according to nth value\n");
+    printf("%%D ID: Delete the data which includes the ID\n");
+    printf("%%E ID: Edit the data which includes the ID\n\n");
+    printf("Input data one by one\n");
     while (get_line(line, stdin)) {
     parse_line(line);
     }
